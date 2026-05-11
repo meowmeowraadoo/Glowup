@@ -6,9 +6,7 @@
   <title>Daily Lesson For My Habibi</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -42,9 +40,8 @@
     }
 
     .intro-heart {
-      font-size: 110px;
+      font-size: 95px;
       animation: heartPop 1.2s ease;
-      filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.3));
     }
 
     .intro-text {
@@ -57,33 +54,15 @@
     }
 
     @keyframes heartPop {
-      0% {
-        transform: scale(0.3);
-        opacity: 0;
-      }
-      55% {
-        transform: scale(1.15);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
+      0% { transform: scale(0.3); opacity: 0; }
+      55% { transform: scale(1.15); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     @keyframes introFade {
-      0% {
-        opacity: 1;
-        visibility: visible;
-      }
-      70% {
-        opacity: 1;
-        visibility: visible;
-      }
-      100% {
-        opacity: 0;
-        visibility: hidden;
-      }
+      0% { opacity: 1; visibility: visible; }
+      70% { opacity: 1; visibility: visible; }
+      100% { opacity: 0; visibility: hidden; }
     }
 
     .sky {
@@ -96,7 +75,7 @@
 
     .floaty {
       position: absolute;
-      bottom: -70px;
+      bottom: -80px;
       opacity: 0;
       animation-name: rise;
       animation-timing-function: linear;
@@ -104,55 +83,16 @@
       filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2));
     }
 
-    .floaty:nth-child(1) { left: 3%; animation-duration: 10s; animation-delay: 0s; font-size: 18px; }
-    .floaty:nth-child(2) { left: 9%; animation-duration: 13s; animation-delay: 2s; font-size: 24px; }
-    .floaty:nth-child(3) { left: 15%; animation-duration: 11s; animation-delay: 4s; font-size: 16px; }
-    .floaty:nth-child(4) { left: 21%; animation-duration: 15s; animation-delay: 1s; font-size: 22px; }
-    .floaty:nth-child(5) { left: 27%; animation-duration: 12s; animation-delay: 3s; font-size: 19px; }
-    .floaty:nth-child(6) { left: 33%; animation-duration: 16s; animation-delay: 5s; font-size: 25px; }
-    .floaty:nth-child(7) { left: 39%; animation-duration: 10s; animation-delay: 6s; font-size: 17px; }
-    .floaty:nth-child(8) { left: 45%; animation-duration: 14s; animation-delay: 1.5s; font-size: 23px; }
-    .floaty:nth-child(9) { left: 51%; animation-duration: 12s; animation-delay: 4.5s; font-size: 18px; }
-    .floaty:nth-child(10) { left: 57%; animation-duration: 15s; animation-delay: 2.5s; font-size: 24px; }
-    .floaty:nth-child(11) { left: 63%; animation-duration: 11s; animation-delay: 6.5s; font-size: 16px; }
-    .floaty:nth-child(12) { left: 69%; animation-duration: 17s; animation-delay: 3.5s; font-size: 22px; }
-    .floaty:nth-child(13) { left: 75%; animation-duration: 13s; animation-delay: 0.8s; font-size: 19px; }
-    .floaty:nth-child(14) { left: 81%; animation-duration: 16s; animation-delay: 5.5s; font-size: 25px; }
-    .floaty:nth-child(15) { left: 87%; animation-duration: 12s; animation-delay: 7s; font-size: 18px; }
-    .floaty:nth-child(16) { left: 93%; animation-duration: 15s; animation-delay: 2.8s; font-size: 23px; }
-    .floaty:nth-child(17) { left: 6%; animation-duration: 18s; animation-delay: 8s; font-size: 20px; }
-    .floaty:nth-child(18) { left: 18%; animation-duration: 14s; animation-delay: 9s; font-size: 17px; }
-    .floaty:nth-child(19) { left: 30%; animation-duration: 19s; animation-delay: 10s; font-size: 23px; }
-    .floaty:nth-child(20) { left: 42%; animation-duration: 16s; animation-delay: 11s; font-size: 18px; }
-    .floaty:nth-child(21) { left: 54%; animation-duration: 18s; animation-delay: 8.5s; font-size: 24px; }
-    .floaty:nth-child(22) { left: 66%; animation-duration: 14s; animation-delay: 9.5s; font-size: 17px; }
-    .floaty:nth-child(23) { left: 78%; animation-duration: 19s; animation-delay: 10.5s; font-size: 22px; }
-    .floaty:nth-child(24) { left: 90%; animation-duration: 16s; animation-delay: 11.5s; font-size: 19px; }
-
     @keyframes rise {
-      0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-        opacity: 0;
-      }
-      8% {
-        opacity: 0.28;
-      }
-      50% {
-        transform: translateY(-55vh) translateX(12px) rotate(8deg);
-        opacity: 0.24;
-      }
-      92% {
-        opacity: 0.22;
-      }
-      100% {
-        transform: translateY(-120vh) translateX(-12px) rotate(-8deg);
-        opacity: 0;
-      }
+      0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+      12% { opacity: 0.35; }
+      85% { opacity: 0.28; }
+      100% { transform: translateY(-120vh) rotate(10deg); opacity: 0; }
     }
 
     .card {
       width: 100%;
-      max-width: 420px;
+      max-width: 430px;
       background: rgba(255, 248, 242, 0.97);
       border-radius: 30px;
       padding: 32px 26px;
@@ -165,14 +105,8 @@
     }
 
     @keyframes cardIn {
-      from {
-        opacity: 0;
-        transform: translateY(18px) scale(0.98);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
+      from { opacity: 0; transform: translateY(18px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     .tag {
@@ -200,8 +134,8 @@
     }
 
     #fact {
-      font-size: 25px;
-      line-height: 1.38;
+      font-size: 24px;
+      line-height: 1.42;
       font-weight: 800;
       margin: 0 0 24px;
       color: #231f20;
@@ -234,37 +168,13 @@
 </head>
 
 <body>
+
   <div id="intro">
     <div class="intro-heart">❤️</div>
     <div class="intro-text">Good morning, my love</div>
   </div>
 
-  <div class="sky">
-    <span class="floaty">❤️</span>
-    <span class="floaty">✨</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">⭐</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">✨</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">⭐</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">✨</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">⭐</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">✨</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">⭐</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">✨</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">⭐</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">✨</span>
-    <span class="floaty">❤️</span>
-    <span class="floaty">⭐</span>
-  </div>
+  <div class="sky" id="sky"></div>
 
   <main class="card">
     <div class="tag">Daily lesson for my <span>habibi</span></div>
@@ -279,79 +189,128 @@
   </main>
 
   <script>
+    const emojis = ["❤️", "🥰", "😍", "💋", "😘", "⭐️", "🌙"];
+    const sky = document.getElementById("sky");
+
+    const lanes = [4, 12, 20, 28, 36, 44, 52, 60, 68, 76, 84, 92];
+
+    for (let i = 0; i < 36; i++) {
+      const span = document.createElement("span");
+      span.className = "floaty";
+      span.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+
+      const lane = lanes[i % lanes.length];
+      const smallOffset = Math.random() * 3 - 1.5;
+
+      span.style.left = (lane + smallOffset) + "%";
+      span.style.fontSize = (15 + Math.random() * 12) + "px";
+      span.style.animationDuration = (12 + Math.random() * 10) + "s";
+      span.style.animationDelay = (i * 0.55) + "s";
+
+      sky.appendChild(span);
+    }
+
     const facts = [
-      "Never make her feel stupid for not knowing something. Teach gently or stay quiet.",
-      "A real gentleman listens without planning his reply while she is still speaking.",
-      "Good etiquette is not about looking rich. It is about making people feel comfortable around you.",
-      "When walking with a woman, match her pace. Do not rush ahead and do not make her chase you.",
-      "Compliment effort, not only appearance. Notice her hair, her dress, her energy, and her details.",
-      "In a restaurant, be kind to the waiter. How you treat service staff says more than your outfit.",
-      "If you invite someone out, have a plan. Time, place, booking, and transport should not be chaos.",
-      "Do not embarrass your partner in public, even as a joke. Respect is part of attraction.",
-      "A clean shirt, good shoes, fresh breath, and calm energy already put you ahead of most men.",
-      "When she tells you something important, remember it. Love is often in the details.",
-      "Being masculine does not mean being cold. Calm, protective, honest, and emotionally steady is stronger.",
-      "Do not interrupt. Let people finish their sentence before you respond.",
-      "If you make a mistake, say it clearly: I understand, I was wrong, I will fix it.",
-      "Hold the door, but do not make a performance out of it. Good manners should feel natural.",
-      "Confidence is quiet. Insecurity is loud.",
-      "Flowers are not only for apologies. Give them on normal days too.",
-      "A good man keeps his word, even in small things.",
-      "Style is not about brands. Fit, cleanliness, and confidence matter more.",
-      "A man who controls his tone during conflict is already ahead.",
-      "Do not make her beg for reassurance. If you love her, say it clearly.",
-      "Being busy is not an excuse to disappear. A short message is still effort.",
-      "If she is upset, first try to understand before trying to defend yourself.",
-      "Protect her peace, not just her safety.",
-      "A mature man does not flirt for attention when he already has someone.",
-      "If you say you will call, call. Small promises build big trust.",
-      "Do not compare her to other women. Ever.",
-      "A woman should feel emotionally safe with you, not confused by you.",
-      "Respect is not only shown in public. It matters even more in private.",
-      "A calm man makes the room feel safer.",
-      "Do not raise your voice to win a conversation. Lower your ego instead.",
-      "Remember important dates. Birthdays, plans, interviews, and little things matter.",
-      "Support her dreams without making her feel like she has to choose between love and ambition.",
-      "Being romantic is not cringe. Being careless is.",
-      "If she had a hard day, ask what she needs: comfort, advice, food, or silence.",
-      "Do not joke about her insecurities. That is not humor, that is damage.",
-      "A man should know when to speak, when to listen, and when to apologize.",
-      "Do not make loyalty look like a sacrifice. It should be normal.",
-      "When you are wrong, do not turn the conversation into her reaction.",
-      "Being gentle with the woman you love does not make you weak.",
-      "If you love her, make her life softer, not heavier.",
-      "A good partner notices when she is tired before she has to say it.",
-      "Do not use silence as punishment. Communicate like an adult.",
-      "The way you act when you are angry shows your real level of maturity.",
-      "A man with discipline is more attractive than a man with excuses.",
-      "Treat her with respect even when you disagree.",
-      "If she tells you something hurt her, do not decide it should not have hurt.",
-      "Be the man she can trust in a room full of people and in a room alone.",
-      "Good manners are not old-fashioned. They are timeless.",
-      "A serious man does not make the woman he loves feel optional.",
-      "When she is speaking, put your phone down.",
-      "Do not let pride ruin a good relationship.",
-      "Speak well of her when she is not in the room.",
-      "A man who can apologize without being forced is rare.",
-      "Consistency is more romantic than big words.",
-      "The right woman should feel chosen, not tolerated.",
-      "Learn to be emotionally honest without being emotionally messy.",
-      "Do not confuse dominance with disrespect.",
-      "Be soft with her heart and strong with your character.",
-      "If you want a high-value woman, become a high-effort man.",
-      "Small daily kindness matters more than one dramatic gesture.",
-      "The best kind of love feels peaceful, not confusing.",
-      "Make her laugh, but never make her the joke.",
-      "A man’s reputation is built by how he behaves when nobody is watching.",
-      "Do not act single when you are loved.",
-      "A real man can be corrected without feeling attacked.",
-      "Being protective means creating safety, not control.",
-      "A woman remembers how you made her feel during small moments.",
-      "Never make her feel alone while she is in a relationship with you.",
-      "Gentle words can fix what pride would destroy.",
-      "If she is important to you, your actions should make that obvious.",
-      "Good love is not about perfection. It is about effort, respect, and consistency.",
-      "Be the reason she feels calm, not the reason she overthinks."
+      "Hermès Birkin = more casual luxury handbag. Kelly = more structured and elegant. Kelly is often seen as more formal.",
+      "A tuxedo is for black-tie events. Satin lapels, usually worn with a bow tie. A normal suit is for business or formal daily wear.",
+      "“Smoking” in Europe can mean tuxedo. French pronunciation: “smo-king.”",
+      "The outermost fork is used first during formal dining.",
+      "Never button the bottom button of a suit jacket.",
+      "Shoes should always be darker than trousers in formalwear.",
+      "A wrinkled shirt destroys an expensive outfit instantly.",
+      "Brunello Cucinelli represents understated wealth, not flashy fashion.",
+      "Loud designer logos are often associated with new money, not old money.",
+      "In luxury settings, calmness matters more than dominance.",
+      "Don’t chew gum while speaking in business settings.",
+      "Keep fingernails short and clean. People notice hands more than men think.",
+      "Cologne should be discovered, not announced.",
+      "If a waiter pours water, stop touching the glass.",
+      "At formal dinners, place napkin on chair if temporarily leaving the table.",
+      "Place napkin on the table only when fully finished.",
+      "Never start eating before everyone is served.",
+      "Bread plate sits on the left. Drinks on the right.",
+      "If unsure which glass is yours, remember: BMW = Bread, Meal, Water from left to right.",
+      "Don’t wear square-toe dress shoes. They are considered outdated.",
+      "Brown shoes are less formal than black shoes.",
+      "Patent leather shoes are mainly for tuxedos.",
+      "Never wear a backpack with a tuxedo.",
+      "Iron your collar properly. People notice collar folds immediately.",
+      "A watch should slide under a shirt cuff easily.",
+      "In business dinners, avoid ordering the most expensive item.",
+      "Don’t discuss politics aggressively at mixed dinners.",
+      "Never place elbows fully on the dining table while eating.",
+      "Espresso is usually drunk quickly, not slowly for one hour.",
+      "Cappuccino after dinner in Italy is considered tourist behavior.",
+      "Sommelier = wine expert. Pronounced: so-mel-yay.",
+      "À la carte means ordering individual dishes instead of a set menu.",
+      "RSVP comes from French: Répondez s’il vous plaît. Means please respond.",
+      "If someone important enters a room, stand up to greet them.",
+      "Don’t interrupt introductions with jokes.",
+      "Eye contact should feel calm, not aggressive.",
+      "In luxury hotels, staff remember respectful guests more than rich guests.",
+      "Don’t snap fingers to call staff.",
+      "Say thank you using the staff member’s name if visible.",
+      "In business, arriving 10 minutes early is punctual. Arriving 30 minutes early creates pressure.",
+      "If hosting dinner, wait until guests begin ordering before ordering yourself.",
+      "Never stack plates at a fine restaurant to help.",
+      "Don’t blow on hot soup loudly.",
+      "Stir coffee quietly without hitting the cup.",
+      "Don’t leave sunglasses on indoors during conversations.",
+      "If wearing loafers casually, ankles can show slightly. If formal, use proper socks.",
+      "White undershirts should never be visible under dress shirts.",
+      "Black tie means tuxedo. Formal does not always mean tuxedo.",
+      "Dinner jacket = tuxedo jacket.",
+      "Peak lapels are more formal than notch lapels.",
+      "Double-breasted suits should usually stay buttoned while standing.",
+      "Never wear a clip-on tie in serious business environments.",
+      "Tie tip should end near the belt buckle.",
+      "Cheap belts crack quickly. Good leather ages well.",
+      "Matching belt and shoe colors creates a cleaner appearance.",
+      "Suede shoes are less formal but very elegant when styled correctly.",
+      "Loro Piana is famous for elite cashmere and extremely soft fabrics.",
+      "Sprezzatura = intentional effortless elegance.",
+      "Don’t over-explain your achievements. High-status people usually speak less about money.",
+      "In Swiss-style business culture, reliability matters more than charisma.",
+      "Don’t ask someone how much do you make.",
+      "Avoid talking loudly on speakerphone in public.",
+      "Keep shoes clean. Dirty shoes ruin credibility instantly.",
+      "When sitting in a suit, unbutton the jacket.",
+      "When standing up again, rebutton it.",
+      "Never wear sports socks with dress shoes.",
+      "Tailoring matters more than brand name.",
+      "Expensive clothing with poor fit still looks cheap.",
+      "A dinner invitation at someone’s home usually deserves a follow-up thank-you message.",
+      "Flowers are appropriate for birthdays, congratulations, apologies, hospital visits, and dinner invitations.",
+      "Red roses often imply romance specifically.",
+      "White lilies are associated with funerals in many cultures.",
+      "Learn basic wine knowledge even if you don’t drink.",
+      "Champagne is poured gently to preserve bubbles.",
+      "In formal hosting, women and elders are usually served first.",
+      "Hold champagne glasses by the stem, not the bowl.",
+      "Don’t spin wine dramatically unless actually tasting professionally.",
+      "Business cards should be handed cleanly, not pulled from a messy wallet.",
+      "Never place a thick wallet in a suit pocket. It ruins the silhouette.",
+      "In Arab culture, hospitality is strongly connected to dignity and generosity.",
+      "In Gulf meetings, small talk before business is normal and important.",
+      "Old money style focuses on quality, fit, and discretion.",
+      "New money style is often associated with loud logos and trend-chasing.",
+      "A gentleman never embarrasses his partner publicly, even jokingly.",
+      "Correct people privately, praise publicly.",
+      "Learn how to pronounce luxury names correctly. It signals exposure and education.",
+      "Bottega Veneta = Bot-teh-ga Ve-ne-ta.",
+      "Givenchy = Zhee-von-shee.",
+      "Louis Vuitton = Loo-ee Vwee-ton.",
+      "Goyard = Goy-yar.",
+      "Cartier = Car-tee-ay.",
+      "A quality pen still matters in executive settings.",
+      "Don’t over-accessorize. One watch and maybe one ring is enough.",
+      "Silence is not awkward when confidence is real.",
+      "Don’t laugh excessively loudly in elegant environments.",
+      "Learn table pacing. Don’t finish every course far before everyone else.",
+      "If your partner is speaking to someone, don’t interrupt to dominate conversation.",
+      "Elegant people make others feel comfortable, not intimidated.",
+      "Never mock staff, accents, or someone’s lack of knowledge publicly.",
+      "Real sophistication is making people feel respected without trying to look superior."
     ];
 
     function getDailyIndex() {
@@ -380,5 +339,6 @@
       }
     }, 3000);
   </script>
+
 </body>
 </html>
