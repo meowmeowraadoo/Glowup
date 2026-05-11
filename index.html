@@ -15,7 +15,7 @@
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background:
-        radial-gradient(circle at 20% 10%, rgba(255, 220, 200, 0.25) 0%, transparent 28%),
+        radial-gradient(circle at 20% 10%, rgba(255, 220, 200, 0.22) 0%, transparent 28%),
         radial-gradient(circle at 80% 20%, rgba(170, 190, 255, 0.16) 0%, transparent 26%),
         linear-gradient(135deg, #07111f, #101c31 45%, #1c1824);
       display: flex;
@@ -27,49 +27,126 @@
       position: relative;
     }
 
-    .floating {
-      position: absolute;
-      font-size: 28px;
-      opacity: 0.22;
-      animation: float 7s ease-in-out infinite;
+    #intro {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at center, rgba(255, 210, 220, 0.28), transparent 38%),
+        linear-gradient(135deg, #07111f, #101c31 45%, #1c1824);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      animation: introFade 3s ease forwards;
+    }
+
+    .intro-heart {
+      font-size: 110px;
+      animation: heartPop 1.2s ease;
+      filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.3));
+    }
+
+    .intro-text {
+      margin-top: 18px;
+      color: #fff8f2;
+      font-size: 25px;
+      font-weight: 800;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    @keyframes heartPop {
+      0% {
+        transform: scale(0.3);
+        opacity: 0;
+      }
+      55% {
+        transform: scale(1.15);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes introFade {
+      0% {
+        opacity: 1;
+        visibility: visible;
+      }
+      70% {
+        opacity: 1;
+        visibility: visible;
+      }
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .sky {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
       pointer-events: none;
       z-index: 1;
     }
 
-    .heart {
-      top: 13%;
-      left: 10%;
-      animation-delay: 0s;
+    .floaty {
+      position: absolute;
+      bottom: -70px;
+      opacity: 0;
+      animation-name: rise;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2));
     }
 
-    .star {
-      top: 20%;
-      right: 12%;
-      animation-delay: 1.4s;
-    }
+    .floaty:nth-child(1) { left: 3%; animation-duration: 10s; animation-delay: 0s; font-size: 18px; }
+    .floaty:nth-child(2) { left: 9%; animation-duration: 13s; animation-delay: 2s; font-size: 24px; }
+    .floaty:nth-child(3) { left: 15%; animation-duration: 11s; animation-delay: 4s; font-size: 16px; }
+    .floaty:nth-child(4) { left: 21%; animation-duration: 15s; animation-delay: 1s; font-size: 22px; }
+    .floaty:nth-child(5) { left: 27%; animation-duration: 12s; animation-delay: 3s; font-size: 19px; }
+    .floaty:nth-child(6) { left: 33%; animation-duration: 16s; animation-delay: 5s; font-size: 25px; }
+    .floaty:nth-child(7) { left: 39%; animation-duration: 10s; animation-delay: 6s; font-size: 17px; }
+    .floaty:nth-child(8) { left: 45%; animation-duration: 14s; animation-delay: 1.5s; font-size: 23px; }
+    .floaty:nth-child(9) { left: 51%; animation-duration: 12s; animation-delay: 4.5s; font-size: 18px; }
+    .floaty:nth-child(10) { left: 57%; animation-duration: 15s; animation-delay: 2.5s; font-size: 24px; }
+    .floaty:nth-child(11) { left: 63%; animation-duration: 11s; animation-delay: 6.5s; font-size: 16px; }
+    .floaty:nth-child(12) { left: 69%; animation-duration: 17s; animation-delay: 3.5s; font-size: 22px; }
+    .floaty:nth-child(13) { left: 75%; animation-duration: 13s; animation-delay: 0.8s; font-size: 19px; }
+    .floaty:nth-child(14) { left: 81%; animation-duration: 16s; animation-delay: 5.5s; font-size: 25px; }
+    .floaty:nth-child(15) { left: 87%; animation-duration: 12s; animation-delay: 7s; font-size: 18px; }
+    .floaty:nth-child(16) { left: 93%; animation-duration: 15s; animation-delay: 2.8s; font-size: 23px; }
+    .floaty:nth-child(17) { left: 6%; animation-duration: 18s; animation-delay: 8s; font-size: 20px; }
+    .floaty:nth-child(18) { left: 18%; animation-duration: 14s; animation-delay: 9s; font-size: 17px; }
+    .floaty:nth-child(19) { left: 30%; animation-duration: 19s; animation-delay: 10s; font-size: 23px; }
+    .floaty:nth-child(20) { left: 42%; animation-duration: 16s; animation-delay: 11s; font-size: 18px; }
+    .floaty:nth-child(21) { left: 54%; animation-duration: 18s; animation-delay: 8.5s; font-size: 24px; }
+    .floaty:nth-child(22) { left: 66%; animation-duration: 14s; animation-delay: 9.5s; font-size: 17px; }
+    .floaty:nth-child(23) { left: 78%; animation-duration: 19s; animation-delay: 10.5s; font-size: 22px; }
+    .floaty:nth-child(24) { left: 90%; animation-duration: 16s; animation-delay: 11.5s; font-size: 19px; }
 
-    .car {
-      bottom: 13%;
-      left: 12%;
-      animation-delay: 2.8s;
-    }
-
-    .tiny-heart {
-      bottom: 20%;
-      right: 14%;
-      font-size: 22px;
-      animation-delay: 4s;
-    }
-
-    @keyframes float {
+    @keyframes rise {
       0% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      8% {
+        opacity: 0.28;
       }
       50% {
-        transform: translateY(-24px) rotate(8deg);
+        transform: translateY(-55vh) translateX(12px) rotate(8deg);
+        opacity: 0.24;
+      }
+      92% {
+        opacity: 0.22;
       }
       100% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(-120vh) translateX(-12px) rotate(-8deg);
+        opacity: 0;
       }
     }
 
@@ -78,20 +155,24 @@
       max-width: 420px;
       background: rgba(255, 248, 242, 0.97);
       border-radius: 30px;
-      padding: 24px 24px 30px;
+      padding: 32px 26px;
       box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
       text-align: center;
       position: relative;
       z-index: 2;
+      backdrop-filter: blur(10px);
+      animation: cardIn 0.9s ease 2.5s both;
     }
 
-    .car-image {
-      width: 100%;
-      height: 165px;
-      object-fit: cover;
-      border-radius: 22px;
-      margin-bottom: 22px;
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+    @keyframes cardIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     .tag {
@@ -102,7 +183,6 @@
       color: #6d4638;
       font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.2px;
       margin-bottom: 16px;
     }
 
@@ -136,10 +216,12 @@
       font-size: 14px;
       cursor: pointer;
       width: 100%;
+      transition: 0.2s ease;
     }
 
     button:hover {
-      opacity: 0.9;
+      transform: scale(1.02);
+      opacity: 0.92;
     }
 
     .note {
@@ -152,18 +234,39 @@
 </head>
 
 <body>
-  <div class="floating heart">♡</div>
-  <div class="floating star">✨</div>
-  <div class="floating car">🏎️</div>
-  <div class="floating tiny-heart">♥</div>
+  <div id="intro">
+    <div class="intro-heart">❤️</div>
+    <div class="intro-text">Good morning, my love</div>
+  </div>
+
+  <div class="sky">
+    <span class="floaty">❤️</span>
+    <span class="floaty">✨</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">⭐</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">✨</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">⭐</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">✨</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">⭐</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">✨</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">⭐</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">✨</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">⭐</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">✨</span>
+    <span class="floaty">❤️</span>
+    <span class="floaty">⭐</span>
+  </div>
 
   <main class="card">
-    <img
-      class="car-image"
-      src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=900&q=80"
-      alt="GTR car"
-    />
-
     <div class="tag">Daily lesson for my <span>habibi</span></div>
 
     <h1>Here is something you should know, my dear potential husband</h1>
@@ -269,6 +372,13 @@
     }
 
     showDailyFact();
+
+    setTimeout(() => {
+      const intro = document.getElementById("intro");
+      if (intro) {
+        intro.style.display = "none";
+      }
+    }, 3000);
   </script>
 </body>
 </html>
