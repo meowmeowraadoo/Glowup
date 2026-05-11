@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Glow-Up</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, #f7e7dd 0%, transparent 35%),
+        linear-gradient(135deg, #171414, #2a211f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #231f20;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(255, 248, 242, 0.96);
+      border-radius: 28px;
+      padding: 32px 28px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #ead2c4;
+      color: #6d4638;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 30px;
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      margin: 0 0 28px;
+      color: #76645d;
+      font-size: 15px;
+    }
+
+    #fact {
+      font-size: 22px;
+      line-height: 1.45;
+      font-weight: 600;
+      margin: 0 0 24px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #8b7770;
+      margin-top: 24px;
+    }
+
+    button {
+      border: none;
+      background: #231f20;
+      color: white;
+      border-radius: 999px;
+      padding: 13px 18px;
+      font-size: 14px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="tag">Daily lesson</div>
+
+    <h1>Modern Man Glow-Up</h1>
+    <p class="subtitle">One small rule a day. Etiquette, confidence, society, and love.</p>
+
+    <p id="fact"></p>
+
+    <button onclick="showRandomFact()">Show another one</button>
+
+    <p class="note">Updated daily with love.</p>
+  </main>
+
+  <script>
+    const facts = [
+      "A real gentleman listens without planning his reply while she is still speaking.",
+      "Good etiquette is not about looking rich. It is about making people feel comfortable around you.",
+      "When walking with a woman, match her pace. Do not rush ahead and do not make her chase you.",
+      "Compliment effort, not only appearance. Notice her hair, her dress, her energy, and her details.",
+      "In a restaurant, be kind to the waiter. How you treat service staff says more than your outfit.",
+      "If you invite someone out, have a plan. Time, place, booking, and transport should not be chaos.",
+      "Do not embarrass your partner in public, even as a joke. Respect is part of attraction.",
+      "A clean shirt, good shoes, fresh breath, and calm energy already put you ahead of most men.",
+      "When she tells you something important, remember it. Love is often in the details.",
+      "Being masculine does not mean being cold. Calm, protective, honest, and emotionally steady is stronger.",
+      "Do not interrupt. Let people finish their sentence before you respond.",
+      "If you make a mistake, say it clearly: I understand, I was wrong, I will fix it.",
+      "Hold the door, but do not make a performance out of it. Good manners should feel natural.",
+      "A man should know how to dress for the place: casual, smart casual, formal, and black tie are not the same.",
+      "Confidence is quiet. Insecurity is loud.",
+      "When meeting her family or friends, greet properly, be present, and avoid sitting on your phone.",
+      "Do not call every emotional conversation drama. Sometimes it is communication.",
+      "Flowers are not only for apologies. Give them on normal days too.",
+      "The best apology has three parts: what you did, why it hurt, and what you will do differently.",
+      "Being modern means respecting women without acting like respect is a gift.",
+      "If she gets dressed up, acknowledge it. A simple 'you look beautiful' matters.",
+      "Never make her feel stupid for not knowing something. Teach gently or stay quiet.",
+      "Do not discuss private relationship problems in front of other people.",
+      "A good man keeps his word, even in small things.",
+      "Style is not about brands. Fit, cleanliness, and confidence matter more."
+    ];
+
+    function getDailyIndex() {
+      const start = new Date(new Date().getFullYear(), 0, 0);
+      const today = new Date();
+      const diff = today - start;
+      const oneDay = 1000 * 60 * 60 * 24;
+      return Math.floor(diff / oneDay) % facts.length;
+    }
+
+    function showDailyFact() {
+      document.getElementById("fact").innerText = facts[getDailyIndex()];
+    }
+
+    function showRandomFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").innerText = facts[randomIndex];
+    }
+
+    showDailyFact();
+  </script>
+</body>
+</html>
