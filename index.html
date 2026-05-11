@@ -15,60 +15,116 @@
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background:
-        radial-gradient(circle at top, #f7e7dd 0%, transparent 35%),
-        linear-gradient(135deg, #171414, #2a211f);
+        radial-gradient(circle at 20% 10%, rgba(255, 220, 200, 0.25) 0%, transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(170, 190, 255, 0.16) 0%, transparent 26%),
+        linear-gradient(135deg, #07111f, #101c31 45%, #1c1824);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #231f20;
       padding: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .floating {
+      position: absolute;
+      font-size: 28px;
+      opacity: 0.22;
+      animation: float 7s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .heart {
+      top: 13%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .star {
+      top: 20%;
+      right: 12%;
+      animation-delay: 1.4s;
+    }
+
+    .car {
+      bottom: 13%;
+      left: 12%;
+      animation-delay: 2.8s;
+    }
+
+    .tiny-heart {
+      bottom: 20%;
+      right: 14%;
+      font-size: 22px;
+      animation-delay: 4s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-24px) rotate(8deg);
+      }
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
     }
 
     .card {
       width: 100%;
       max-width: 420px;
-      background: rgba(255, 248, 242, 0.96);
-      border-radius: 28px;
-      padding: 32px 28px;
-      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      background: rgba(255, 248, 242, 0.97);
+      border-radius: 30px;
+      padding: 24px 24px 30px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
       text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .car-image {
+      width: 100%;
+      height: 165px;
+      object-fit: cover;
+      border-radius: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
     }
 
     .tag {
       display: inline-block;
-      padding: 8px 14px;
+      padding: 10px 17px;
       border-radius: 999px;
       background: #ead2c4;
       color: #6d4638;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.4px;
-      margin-bottom: 18px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 16px;
+    }
+
+    .tag span {
+      font-size: 16px;
+      font-weight: 800;
     }
 
     h1 {
-      margin: 0 0 12px;
-      font-size: 30px;
-      line-height: 1.15;
-    }
-
-    .subtitle {
-      margin: 0 0 28px;
+      margin: 0 0 22px;
+      font-size: 16px;
+      line-height: 1.45;
+      font-weight: 500;
       color: #76645d;
-      font-size: 15px;
     }
 
     #fact {
-      font-size: 22px;
-      line-height: 1.45;
-      font-weight: 600;
+      font-size: 25px;
+      line-height: 1.38;
+      font-weight: 800;
       margin: 0 0 24px;
-    }
-
-    .note {
-      font-size: 13px;
-      color: #8b7770;
-      margin-top: 24px;
+      color: #231f20;
     }
 
     button {
@@ -85,12 +141,30 @@
     button:hover {
       opacity: 0.9;
     }
+
+    .note {
+      font-size: 13px;
+      color: #8b7770;
+      margin-top: 24px;
+      font-weight: 600;
+    }
   </style>
 </head>
 
 <body>
+  <div class="floating heart">♡</div>
+  <div class="floating star">✨</div>
+  <div class="floating car">🏎️</div>
+  <div class="floating tiny-heart">♥</div>
+
   <main class="card">
-    <div class="tag">Daily lesson for my habibi</div>
+    <img
+      class="car-image"
+      src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=900&q=80"
+      alt="GTR car"
+    />
+
+    <div class="tag">Daily lesson for my <span>habibi</span></div>
 
     <h1>Here is something you should know, my dear potential husband</h1>
 
@@ -98,7 +172,7 @@
 
     <button onclick="showRandomFact()">Show another one</button>
 
-    <p class="note">Updated daily with love, so proud of you</p>
+    <p class="note">Updated daily with love, so proud of you!</p>
   </main>
 
   <script>
@@ -120,7 +194,61 @@
       "Confidence is quiet. Insecurity is loud.",
       "Flowers are not only for apologies. Give them on normal days too.",
       "A good man keeps his word, even in small things.",
-      "Style is not about brands. Fit, cleanliness, and confidence matter more."
+      "Style is not about brands. Fit, cleanliness, and confidence matter more.",
+      "A man who controls his tone during conflict is already ahead.",
+      "Do not make her beg for reassurance. If you love her, say it clearly.",
+      "Being busy is not an excuse to disappear. A short message is still effort.",
+      "If she is upset, first try to understand before trying to defend yourself.",
+      "Protect her peace, not just her safety.",
+      "A mature man does not flirt for attention when he already has someone.",
+      "If you say you will call, call. Small promises build big trust.",
+      "Do not compare her to other women. Ever.",
+      "A woman should feel emotionally safe with you, not confused by you.",
+      "Respect is not only shown in public. It matters even more in private.",
+      "A calm man makes the room feel safer.",
+      "Do not raise your voice to win a conversation. Lower your ego instead.",
+      "Remember important dates. Birthdays, plans, interviews, and little things matter.",
+      "Support her dreams without making her feel like she has to choose between love and ambition.",
+      "Being romantic is not cringe. Being careless is.",
+      "If she had a hard day, ask what she needs: comfort, advice, food, or silence.",
+      "Do not joke about her insecurities. That is not humor, that is damage.",
+      "A man should know when to speak, when to listen, and when to apologize.",
+      "Do not make loyalty look like a sacrifice. It should be normal.",
+      "When you are wrong, do not turn the conversation into her reaction.",
+      "Being gentle with the woman you love does not make you weak.",
+      "If you love her, make her life softer, not heavier.",
+      "A good partner notices when she is tired before she has to say it.",
+      "Do not use silence as punishment. Communicate like an adult.",
+      "The way you act when you are angry shows your real level of maturity.",
+      "A man with discipline is more attractive than a man with excuses.",
+      "Treat her with respect even when you disagree.",
+      "If she tells you something hurt her, do not decide it should not have hurt.",
+      "Be the man she can trust in a room full of people and in a room alone.",
+      "Good manners are not old-fashioned. They are timeless.",
+      "A serious man does not make the woman he loves feel optional.",
+      "When she is speaking, put your phone down.",
+      "Do not let pride ruin a good relationship.",
+      "Speak well of her when she is not in the room.",
+      "A man who can apologize without being forced is rare.",
+      "Consistency is more romantic than big words.",
+      "The right woman should feel chosen, not tolerated.",
+      "Learn to be emotionally honest without being emotionally messy.",
+      "Do not confuse dominance with disrespect.",
+      "Be soft with her heart and strong with your character.",
+      "If you want a high-value woman, become a high-effort man.",
+      "Small daily kindness matters more than one dramatic gesture.",
+      "The best kind of love feels peaceful, not confusing.",
+      "Make her laugh, but never make her the joke.",
+      "A man’s reputation is built by how he behaves when nobody is watching.",
+      "Do not act single when you are loved.",
+      "A real man can be corrected without feeling attacked.",
+      "Being protective means creating safety, not control.",
+      "A woman remembers how you made her feel during small moments.",
+      "Never make her feel alone while she is in a relationship with you.",
+      "Gentle words can fix what pride would destroy.",
+      "If she is important to you, your actions should make that obvious.",
+      "Good love is not about perfection. It is about effort, respect, and consistency.",
+      "Be the reason she feels calm, not the reason she overthinks."
     ];
 
     function getDailyIndex() {
