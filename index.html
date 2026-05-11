@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elite Knowledge</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 20%;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Today’s Elite Knowledge</h1>
+  <p id="fact"></p>
+
+  <script>
+    const facts = [
+      "A tuxedo is worn after 6 PM.",
+      "The outer fork is used first.",
+      "Navy suits are more versatile than black.",
+      "Cashmere comes from goats.",
+      "Loafers are less formal than Oxford shoes."
+    ];
+
+    const day = new Date().getDate();
+    document.getElementById("fact").innerText = facts[day % facts.length];
+  </script>
+</body>
+</html>
